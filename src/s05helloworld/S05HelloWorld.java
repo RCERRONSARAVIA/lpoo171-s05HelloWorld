@@ -5,6 +5,8 @@
  */
 package s05helloworld;
 
+import java.util.Scanner;
+
 /**
  *
  * @author alumno
@@ -15,6 +17,18 @@ public class S05HelloWorld {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        System.out.println("Bienvenido a la Aplicacion Total Factura");
+        System.out.println(args);
+        
+        Scanner sc=new Scanner(System.in);
+        
+        System.out.println("Ingrese Subtotal:          ");
+        double subtotal = sc.nextDouble();
+        double impuesto = subtotal * 0.18;
+        double total = subtotal + impuesto;
+        
+        String mensaje = "Total Factura:  " + total + "\n";
+        System.out.println(mensaje);
     
     }
     
